@@ -21,7 +21,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
+//app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -42,6 +42,7 @@ app.use(function(err, req, res, next) {
 const URL = process.env.URL 
 const PORT = process.env.PORT || 8000;
  
-mongoose.connect(URL,{ useNewUrlParser: true, useUnifiedTopology: true })
+/*mongoose.connect(URL,{ useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, console.log("server is running sucsessfully")))
-  .catch ( (err)=> console.log(err))
+  .catch ( (err)=> console.log(err))*/
+  app.listen(PORT, console.log("server is running sucsessfully"))
