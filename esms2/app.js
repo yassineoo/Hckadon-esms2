@@ -39,7 +39,7 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const URL = process.env.URL 
+const URL = process.env.URL || 'mongodb+srv://yassine:123698745@cluster0.yr2lt.mongodb.net/esms2?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 8000;
  
 /*mongoose.connect(URL,{ useNewUrlParser: true, useUnifiedTopology: true })

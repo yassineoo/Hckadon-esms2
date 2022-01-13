@@ -10,4 +10,4 @@ const participant  = mongoose.Schema({
 
 
 const Participant = mongoose.model('Participant', participant );
-export default Participant ;
+module.exports = Participant ;
