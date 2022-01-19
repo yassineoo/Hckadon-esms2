@@ -39,10 +39,10 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const URL = process.env.URL || 'mongodb+srv://yassine:123698745@cluster0.yr2lt.mongodb.net/esms2?retryWrites=true&w=majority'
+const URL = 'mongodb+srv://yassine:123654789@cluster0.yr2lt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
 const PORT = process.env.PORT || 8000;
  
-/*mongoose.connect(URL,{ useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(URL,{ useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, console.log("server is running sucsessfully")))
-  .catch ( (err)=> console.log(err))*/
-  app.listen(PORT, console.log("server is running sucsessfully"))
+  .catch ( (err)=> console.log(err))
+  //app.listen(PORT, console.log("server is running sucsessfully"))

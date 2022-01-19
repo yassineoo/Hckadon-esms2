@@ -3,8 +3,13 @@ const mongoose = require('mongoose');
 const participant  = mongoose.Schema({
    firstName: { type: String, required: true },
   lastName: { type: String, required: true },
-  email: { type: String, required: true },
-  team: { type: String, required: true },
+  email: { type: String, required: true ,unique : true },
+  university: { type: String, required: true },
+  exp : { type: String, required: true },
+  skills :{ type: String, required: true },
+  team: { type: String  },
+  motiv : { type: String },
+
   //price: { type: Number, required: true },
 });
 
