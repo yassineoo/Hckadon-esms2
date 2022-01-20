@@ -27,18 +27,21 @@ const create = async (req,res) => {
    if (await Participant.findOne({email:form.email}))
    {
     console.log('email existe');
-    res.render('crtest')
+    res.render('main')
    }
   else {
     console.log('new one caom');
     if (form.teamN){
       const participant  = await Participant.create({...form , status :'alone' });
       console.log('cas 1 ' , participant );
-    } else if (form.teamName) {
+      res.render('main')
+    } else if (form.newTeam) {
 
       const participant  = await Participant.create({...form , status :'team' ,team:form.teamName});
       const team = await Team.create({name:form.teamName , members : [participant._id]});
-      console.log(participant ,team);
+      console.log('new ',participant ,team);
+      
+
     }
     else {
       const team =  await Team.findOne({name:form.team})
@@ -48,6 +51,7 @@ const create = async (req,res) => {
        const newTeam =  await Team.findByIdAndUpdate(team.id , team , {new:true});
        console.log('hiu wanna join  ' ,participant);
         console.log('hiu wanna join  ' , newTeam);
+        res.status(201).redirect('main');
 
       }else {
          console.log('sorry team doesn.t existe ');
@@ -64,7 +68,7 @@ const create = async (req,res) => {
   }
 
    catch (error) {
-     res.status(500).json(error,'something goes wrong please try again');
+     res.status(500).json(error);
   } 
    
 }

@@ -40,7 +40,7 @@ app.use(function(err, req, res, next) {
 });
 
 const URL = 'mongodb+srv://yassine:123654789@cluster0.yr2lt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
  
 mongoose.connect(URL,{ useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => app.listen(PORT, console.log("server is running sucsessfully")))
