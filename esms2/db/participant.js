@@ -7,6 +7,7 @@ const participant  = mongoose.Schema({
   university: { type: String, required: true },
   exp : { type: String, required: true },
   skills :{ type: String, required: true },
+ status: { type: String  },
   team: { type: String  },
   motiv : { type: String },
 
