@@ -16,27 +16,24 @@
 </head>
 <body>
     <p>To register in the hackadon please fill out the following form</p>
-    
-<<<<<<< Updated upstream
+
    <form action='#' method="post">
-=======
-   <form action='' method="post">
->>>>>>> Stashed changes
+    <% if(message){%>
+        <% if(message=='done'){%>
+        <h5>thank u for regestration u will recive an email soon with more destails</h5>
+        <%}else{%>
+        <h4>try again</h4>
+        <%}%>
+        <%}%>
        <label for="firstName">First Name:</label>
        <input class="input" type="text" name="firstName" id="firstName"><br><br>
        <label for="lastName">LastName:</label>
        <input class="input" type="text" name="lastName" id="lastName"><br><br>
        <label for="email">email account:</label>
        <input class="input" type="email" name="email" id="email"><br><br>
-       <p>Your academic background - Are you currently pursuing or did you pursue an academic or professional degree ?</p>
-       <label for="yescurrent">yes,Iam</label>
-       <input type="radio" name="academicbg" id="yescurrent">
-       <label for="yesdid">yes,I did</label>
-       <input type="radio" name="academicbg" id="yesdid">
-       <label for="no">No ,I didn't</label>
-       <input type="radio" name="academicbg" id="no">
+      
        <br><br>
-       <label for="schooln">if yes enter the name of your university (institution):</label>
+       <label for="schooln"> the name of your university (institution):</label>
        <input class="input" type="text" name="university" id="schooln"><br><br>
        <p>Are you part of a team ?</p>
        <label for="teamy">yes</label>

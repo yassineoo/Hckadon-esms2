@@ -11,7 +11,7 @@ const getAllUsers=async (req,res) => {
 }
 const getAllteams=async (req,res) => {
   try {
-   const  all = await team.find();
+   const  all = await Team.find();
    
     res.status(200).json(all);
   } catch (error) {
@@ -34,35 +34,35 @@ const create = async (req,res) => {
     if (form.teamN){
       const participant  = await Participant.create({...form , status :'alone' });
       console.log('cas 1 ' , participant );
-      res.render('main')
+      res.render('main',{message:'done'});
     } else if (form.newTeam) {
 
-      const participant  = await Participant.create({...form , status :'team' ,team:form.teamName});
-      const team = await Team.create({name:form.teamName , members : [participant._id]});
+      const participant  = await Participant.create({...form , status :'team' ,team:form.newTeam });
+      const team = await  Team.create({name: form.newTeam , members : [participant._id]});
       console.log('new ',participant ,team);
       
 
     }
     else {
-      const team =  await Team.findOne({name:form.team})
+      const team =  await Team.findOne({name:form.teamName})
       if (team ){
         const participant  = await Participant.create({...form , status :'team' ,team:form.teamName});
         team.members.push(participant._id);
        const newTeam =  await Team.findByIdAndUpdate(team.id , team , {new:true});
        console.log('hiu wanna join  ' ,participant);
         console.log('hiu wanna join  ' , newTeam);
-        res.status(201).redirect('main');
+        res.status(201).render('main',{message:'done'});
 
       }else {
          console.log('sorry team doesn.t existe ');
-         res.status(201).render('main');
+         res.status(201).render('main',{message:'sorry team doesn.t existe'});
       }
     }
 
   //const participant  = await Participant.create(form);
  //   console.log(participant);
   // req.flash('message','test created succsefly');
-   res.status(201).render('main');
+ 
     }
       
   }
