@@ -3,7 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "nodemon app.js"
+    "start": "node app.js"
+  },
+  "engines": {
+    "node": "v16.13.1"
   },
   "dependencies": {
     "body-parser": "^1.19.1",
@@ -11,9 +14,8 @@
     "debug": "~2.6.9",
     "ejs": "^3.1.6",
     "express": "~4.16.1",
-    "http-errors": "~1.6.3",
+    "mongoose": "^6.1.7",
     "morgan": "~1.9.1",
-    "nodemon": "^2.0.15",
-    "pug": "2.0.0-beta11"
+    "nodemon": "^2.0.15"
   }
 }
