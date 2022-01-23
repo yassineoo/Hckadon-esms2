@@ -32,22 +32,23 @@ const create = async (req,res) => {
     res.render('main')
    }
   else {
-    console.log('new one caom');
+    
     if (form.teamN){
-      const participant  = await Participant.create({...form , status :'alone' });
+      const participant  = await Participant.create({...form , status :'alone',team:'' });
       console.log('cas 1 ' , participant );
       res.render('main',{message:'done'});
     } else if (form.newTeam) {
 
       const participant  = await Participant.create({...form , status :'team' ,team:form.newTeam });
-      const team = await  Team.create({name: form.newTeam , members : [participant._id]});
+      const team = await  Team.create({name: form.newTeam.lowerCase().trim() , members : [participant._id]});
       console.log('new ',participant ,team);
-      
+      res.render('main',{message:'done'});
 
     }
     else {
       const team =  await Team.findOne({name:form.teamName})
       if (team ){
+        if (team.members.length <5){
         const participant  = await Participant.create({...form , status :'team' ,team:form.teamName});
         team.members.push(participant._id);
        const newTeam =  await Team.findByIdAndUpdate(team.id , team , {new:true});
@@ -56,8 +57,13 @@ const create = async (req,res) => {
         res.status(201).render('main',{message:'done'});
 
       }else {
+        console.log('team has reached the limites number of participants ');
+        res.status(400).render('main',{message:'team has reached the limites number of participants'});
+     }
+
+      }else {
          console.log('sorry team doesn.t existe ');
-         res.status(201).render('main',{message:'sorry team doesn.t existe'});
+         res.status(400).render('main',{message:'sorry team doesn.t existe'});
       }
     }
 
