@@ -3,9 +3,11 @@ const Team =require('../db/team.js');
 const getAllUsers=async (req,res) => {
   try {
    const  all =await Participant.find();
-    res.status(200).json(all);
+   console.log(typeof all);
+   console.log(all);
+    res.status(200).render('index',{users:all});
   } catch (error) {
-    res.status(200).json(error);
+    res.status(400).json(error);
   }
 
 }

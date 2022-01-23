@@ -23,10 +23,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
 
-// catch 404 and forward to error handler
-app.use(function(req, res, next) {
-  next(createError(404));
-});
 
 
 const URL = process.env.URL || 'mongodb+srv://yassine:123654789@cluster0.yr2lt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'

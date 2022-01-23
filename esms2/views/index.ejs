@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Table V01</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="stylesheets/util.css">
+	<link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+<!--===============================================================================================-->
+</head>
+<body>
+	
+	<div class="limiter">
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100">
+					<table>
+						<thead>
+							<tr class="table100-head">
+								<th class="column1">Name</th>
+								<th class="column2">email</th>
+								<th class="column3">university</th>
+								<th class="column4">exp</th>
+								<th class="column5">status</th>
+								<th class="column6">team</th>
+								<th class="column7">skills</th>
+								<th class="column8">motiv</th>
+							</tr>
+						</thead>
+						<tbody>
+							<% if(users) {%>
+                                <% users.map( user => { %>
+									
+										<tr>
+							
+							    
+							
+									<td class="column1"><%=user.lastName + user.lastName %> </td>
+									<td class="column2"><%= user.email  %></td>
+									<td class="column3"><%= user.university %></td>
+									<td class="column4"><%= user.exp  %></td>
+									<td class="column5"><%= user.satus%></td>
+									<td class="column6"><%= user.team  %></td>
+									<td class="column7"><%= user.skills  %></td>
+									<td class="column8"><%= user.motiv %></td>
+								</tr>
+								<% 
+							}
+							 )
+							} %>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	
+
+<!--===============================================================================================-->	
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+
+</body>
+</html>

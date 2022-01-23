@@ -75,18 +75,44 @@
 
       
     </div>
-    <div class="container-fluid" data-aos="fade-up">
+    <div class="container-fluid conCon container" data-aos="fade-up">
       <div class="heroCon">
-        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center">
+        <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 heroText">
           <h1>HACKADON</h1>
           <h2>your chance to do al5ir and</br> enjoy in the same time</h2>
          
         </div>
+        <div class='rightSide'>
+          
+          <div class="containerTime">
+            <h2 id="headline">Stay tuned 🔥🔥</h2>
+              <div id="countdown">
+                <ul>
+                  <li><span id="days"></span>days</li>
+              <li><span id="hours"></span>Hours</li>
+              <li><span id="minutes"></span>Minutes</li>
+              <li><span id="seconds"></span>Seconds</li>
+            </ul>
+          </div>
+          <div id="content" class="emoji">
+            <span>🥳</span>
+            <span>🎉</span>
+            <span>🎂</span>
+          </div>
+        </div>
         <div class="registerCon" > 
-          <a href="./inscription" class="btn-get-started scrollto registerButton">Register Now !!</a>
+          <a href="./inscription" class="registerButton btn-get-started scrollto ">Register Now !!</a>
           <!--   <img src="images/hero.png" class="img-fluid animated" alt=""> -->
         </div>
       </div>
+      </div>
+      <a href="#about"  > 
+        <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+              </a> 
     </div>
     <div class="linesB">
       <span class="line"></span>
@@ -849,6 +875,51 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script >
+    (function () {
+  const second = 1000,
+        minute = second * 60,
+        hour = minute * 60,
+        day = hour * 24;
+
+  //I'm adding this section so I don't have to keep updating this pen every year :-)
+  //remove this if you don't need it
+  let today = new Date(),
+      dd = String(today.getDate()).padStart(2, "0"),
+      mm = String(today.getMonth() + 1).padStart(2, "0"),
+      yyyy = today.getFullYear(),
+      nextYear = yyyy + 1,
+      dayMonth = "01/30/",
+      eventday = dayMonth + yyyy;
+  
+  today = mm + "/" + dd + "/" + yyyy;
+  if (today > eventday) {
+    eventday = dayMonth + nextYear;
+  }
+  //end
+  
+  const countDown = new Date(eventday).getTime(),
+      x = setInterval(function() {    
+
+        const now = new Date().getTime(),
+              distance = countDown - now;
+
+        document.getElementById("days").innerText = Math.floor(distance / (day)),
+          document.getElementById("hours").innerText = Math.floor((distance % (day)) / (hour)),
+          document.getElementById("minutes").innerText = Math.floor((distance % (hour)) / (minute)),
+          document.getElementById("seconds").innerText = Math.floor((distance % (minute)) / second);
+
+        //do something later when date is reached
+        if (distance < 0) {
+          document.getElementById("headline").innerText = "It's my eventday!";
+          document.getElementById("countdown").style.display = "none";
+          document.getElementById("content").style.display = "block";
+          clearInterval(x);
+        }
+        //seconds
+      }, 0)
+  }());
+  </script>
 
 </body>
 
