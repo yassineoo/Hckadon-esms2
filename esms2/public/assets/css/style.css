@@ -143,6 +143,11 @@ h6 {
 #header .logo img {
      max-height: 70px;
 }
+.logoCount {
+     display:flex;
+     justify-content: center;
+     align-items: center;
+}
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -357,6 +362,7 @@ h6 {
 
 .registerCon {
      display: flex;
+     flex-direction:column-reverse;
      padding-right: 15%;
      padding-left: 15%;
      margin-bottom: 20px;
@@ -390,6 +396,7 @@ h6 {
      margin-top: 30px;
      color: rgb(0, 0, 0);
      background-color: rgb(8, 133, 250);
+     text-align: center;
 }
 #hero .btn-get-started:hover {
      background: #fff;
@@ -403,7 +410,7 @@ h6 {
      display: flex;
      flex-direction: column;
      position: absolute;
-     bottom: 0%;
+     bottom: -5%;
      left: 50%;
      transform: translate(-50%, -50%);
 }
@@ -457,21 +464,18 @@ h6 {
           padding-top: 68px;
           margin-top: 68px;
      }
-     #hero .animated {
-          -webkit-animation: none;
-          animation: none;
-     }
+   
      #hero .btn-get-started {
           font-size: 18px;
      }
 
-     /*
+     
   #hero .hero-img {
     text-align: center;
   }
   #hero .hero-img img {
     width: 50%;
-  }*/
+  }
 }
 @media (max-width: 814px) {
      #hero h1 {
@@ -492,21 +496,21 @@ h6 {
           padding: auto;
           margin-bottom: 20px;
      }
-     /*#hero .hero-img img {
+     #hero .hero-img img {
     width: 60%;
-  }*/
+  }
 }
 @media (max-width: 575px) {
-     /* #hero .hero-img img {
+      #hero .hero-img img {
     width: 80%;
-  }*/
+  }
 }
 @media screen and (max-height: 600px) {
      #hero {
           height: 100vh;
      }
 }
-/*
+
 @-webkit-keyframes up-down {
   0% {
     transform: translateY(10px);
@@ -523,7 +527,7 @@ h6 {
   100% {
     transform: translateY(-10px);
   }
-}*/
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -572,12 +576,15 @@ section {
 }
 
 .about .container{
-  height: 350px;
+  height: auto;
   background-color: rgba(255, 255, 255, 0.582);
   border-radius: 20px;
   position: relative;
   padding: 20px;
   display: flex;
+  justify-content:center;
+  align-items: center;
+
   flex-wrap: nowrap;
 }
 .about .container .imageabout{
@@ -599,15 +606,16 @@ section {
   display: none;
 }
 
-@media (max-width: 450px){
+@media (max-width: 994px){
   .about .container{
     width: 80%;
     height: 500px;
     flex-wrap: wrap;
+    flex-direction: column;
     height: auto;
   }
   .about .container .text p{
-    color: #0f1120;
+    color: #242531;
     padding: 1px;
     width: auto;
   }
@@ -1232,6 +1240,14 @@ section {
      font-size: 14px;
      margin-bottom: 0;
 }
+.myRow {
+     display: flex;
+     justify-content:space-around;
+     align-items: center;
+     width: 90vw;
+     flex: 1;
+     width: auto;
+}
 .contact .php-email-form {
      box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
      padding: 30px;
@@ -1509,7 +1525,7 @@ section {
      color: #fff;
      text-decoration: none;
 }
-
+/*--------------------------------------*/
 .rightSide {
      display: flex;
      flex-direction: column-reverse;
@@ -1522,16 +1538,17 @@ section {
      padding: auto;
      text-align: center;
 }
+.containerTime ul {
+     padding :auto;
+     display:flex;
+     flex-wrap:nowrap;
 
-.containerTime h2 {
-     font-weight: normal;
-     letter-spacing: 0.125rem;
-     text-transform: uppercase;
 }
+
 
 .containerTime li {
      display: inline-block;
-     font-size: 1.2em;
+     font-size: 0.9em;
      list-style-type: none;
      padding: 1em;
      text-transform: uppercase;
@@ -1539,29 +1556,18 @@ section {
 
 .containerTime li span {
      display: block;
-     font-size: 3rem;
+     font-size: 16px;
 }
 
-.emoji {
-     display: none;
-     padding: 1rem;
-}
-
-.emoji span {
-     font-size: 4rem;
-     padding: 0 0.5rem;
-}
 
 @media all and (max-width: 1200px) {
-     .containerTime h2 {
-          font-size: calc(1.5rem * var(--smaller));
-     }
+
 
      .containerTime li {
-          font-size: calc(1.125rem * var(--smaller));
+          font-size: 0.5rem;
      }
 
      .containerTime li span {
-          font-size: calc(3.375rem * var(--smaller));
+          font-size: 14px;
      }
 }

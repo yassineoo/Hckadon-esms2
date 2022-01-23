@@ -8,9 +8,16 @@ const getAllUsers=async (req,res) => {
     res.status(200).render('index',{users:all});
   } catch (error) {
     res.status(400).json(error);
-  }
+  }}
+  const auth =(req,res,next)=>{
+    console.log(req.session.logged);
+    if(req.session.logged){
+        next();
+    }else{
+        res .render('adminlogin' ,{message:''});
+    }
+ }
 
-}
 const getAllteams=async (req,res) => {
   try {
    const  all = await Team.find();
@@ -29,20 +36,20 @@ const create = async (req,res) => {
    if (await Participant.findOne({email:form.email}))
    {
     console.log('email existe');
-    res.render('main')
+    res.render('regestration',{message:'email already existe'})
    }
   else {
     
     if (form.teamN){
       const participant  = await Participant.create({...form , status :'alone',team:'' });
       console.log('cas 1 ' , participant );
-      res.render('main',{message:'done'});
+      res.render('regestration',{message:'done'});
     } else if (form.newTeam) {
 
       const participant  = await Participant.create({...form , status :'team' ,team:form.newTeam });
-      const team = await  Team.create({name: form.newTeam.lowerCase().trim() , members : [participant._id]});
+      const team = await  Team.create({name: form.newTeam.toLowerCase().trim() , members : [participant._id]});
       console.log('new ',participant ,team);
-      res.render('main',{message:'done'});
+      res.render('regestration',{message:'done'});
 
     }
     else {
@@ -54,16 +61,16 @@ const create = async (req,res) => {
        const newTeam =  await Team.findByIdAndUpdate(team.id , team , {new:true});
        console.log('hiu wanna join  ' ,participant);
         console.log('hiu wanna join  ' , newTeam);
-        res.status(201).render('main',{message:'done'});
+        res.status(201).render('regestration',{message:'done'});
 
       }else {
         console.log('team has reached the limites number of participants ');
-        res.status(400).render('main',{message:'team has reached the limites number of participants'});
+        res.status(400).render('regestration',{message: ' team has reached the limites number of participants'});
      }
 
       }else {
          console.log('sorry team doesn.t existe ');
-         res.status(400).render('main',{message:'sorry team doesn.t existe'});
+         res.status(400).render('regestration',{message:'sorry team doesn.t existe'});
       }
     }
 
@@ -76,8 +83,42 @@ const create = async (req,res) => {
   }
 
    catch (error) {
+     console.log(error);
      res.status(500).json(error);
   } 
    
 }
-module.exports = {create,getAllUsers,getAllteams}
+const getLogin=(req,res)=> {
+
+  res.render('adminlogin');
+}
+const login = async(req,res)=> {
+try {
+  if (req.body.Username != "yassine")
+  {
+  
+      res.redirect('/login');
+      return;
+  }
+    const pass ='esms2';
+      const rp = req.body.Password==pass
+
+      if (rp){
+        req.session.logged = true
+        req.session.username = "yassine";
+        res.redirect('/users');
+
+      }
+      else     {
+    
+        res.redirect('/login',{message:'wrong password'});
+    }
+    } catch (error) {
+      console.log(error);
+      res.status(500).send(error);
+    }
+
+
+  }
+
+module.exports = {create,getAllUsers,getAllteams ,login ,getLogin ,auth}

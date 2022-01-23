@@ -40,17 +40,38 @@
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
-      <h1 class="logo"><img src='images/hackadon2.png'></img></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+     <div class="logoCount">
+      <a href="index.html" class="logo"><img src="images/hackadon2.png" alt="" class="img-fluid"></a>
+
+     
+           
+      <div class="containerTime">
+                                 
+        <div id="countdown">
+       
+          <ul >
+            
+            <li><span id="days"></span>days</li>
+        <li><span id="hours"></span>Hours</li>
+        <li><span id="minutes"></span>Minutes</li>
+        <li><span id="seconds"></span>🔥Seconds🔥</li>
+        
+      </ul>
+    </div>
+    </div>
+     </div>
+
 
       <nav id="navbar" class="navbar">
+
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">Agenda</a></li>
           <li><a class="nav-link scrollto " href="#portfolio">Contact</a></li>
-          <li><a class="getstarted scrollto" href="./inscription">Registration </a></li>
+          <li>
+            <a class="getstarted scrollto" href="./inscription">Registration </a>
+          </li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -60,6 +81,7 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex align-items-center">
+ 
     <div class="linesT">
       <span class="line"></span>
       <span class="line"></span>
@@ -80,29 +102,16 @@
         <div class="col-xl-5 col-lg-6 pt-3 pt-lg-0 order-2 order-lg-1 heroText">
           <h1>HACKADON</h1>
           <h2>your chance to do al5ir and</br> enjoy in the same time</h2>
+
          
         </div>
         <div class='rightSide'>
           
-          <div class="containerTime">
-            <h2 id="headline">Stay tuned 🔥🔥</h2>
-              <div id="countdown">
-                <ul>
-                  <li><span id="days"></span>days</li>
-              <li><span id="hours"></span>Hours</li>
-              <li><span id="minutes"></span>Minutes</li>
-              <li><span id="seconds"></span>Seconds</li>
-            </ul>
-          </div>
-          <div id="content" class="emoji">
-            <span>🥳</span>
-            <span>🎉</span>
-            <span>🎂</span>
-          </div>
-        </div>
+      
         <div class="registerCon" > 
           <a href="./inscription" class="registerButton btn-get-started scrollto ">Register Now !!</a>
-          <!--   <img src="images/hero.png" class="img-fluid animated" alt=""> -->
+             <img src="images/hero.png" class="img-fluid animated" alt="">
+  
         </div>
       </div>
       </div>
@@ -719,14 +728,10 @@
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="info-box mb-4">
-              <i class="bx bx-map"></i>
-              <h3>Our Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
-            </div>
-          </div>
+        <div class="row myRow">
+        
+          
+    
 
           <div class="col-lg-3 col-md-6">
             <div class="info-box  mb-4">
@@ -746,11 +751,7 @@
 
         </div>
 
-        <div class="row">
-
-          <div class="col-lg-6 ">
-            <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
-          </div>
+        <div class="row myRow">
 
           <div class="col-lg-6">
             <form action="forms/contact.php" method="post" role="form" class="php-email-form">
