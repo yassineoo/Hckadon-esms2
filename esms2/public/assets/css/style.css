@@ -1490,6 +1490,9 @@ section {
  .hour7 h3{
      margin: 20px;
 }
+.hour2\,5 h3 ,.hour3\,5 h3{
+margin: 0px;
+}
  .agendasect h3{
       font-size: 1.1rem;
 
