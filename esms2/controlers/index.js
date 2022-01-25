@@ -3,6 +3,7 @@ const Team =require('../db/team.js');
 /*const dotenv =require('dotenv');
 dotenv.config();*/
 const nodemailer = require("nodemailer");
+
 const getAllUsers=async (req,res) => {
   try {
    const  all =await Participant.find();
