@@ -640,6 +640,8 @@ section {
 .myswiper {
    
      background-color: #091747;
+     overflow-y:auto; 
+     overflow-x:hidden !important;
      display: flex;
      flex-direction: column;
      justify-content: center;
