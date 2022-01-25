@@ -692,8 +692,10 @@ section {
 .cardCon img {
      width: 150px;
      height: 90px;
+     padding-top: 10px;
 }
 .cardCon h3{
+     padding-bottom: 20px;
  padding: auto;
  color: black;
  text-align: center;
@@ -1653,10 +1655,11 @@ section {
 
 
 .containerTime li {
-     display: inline-block;
+     display: flex;
+     flex-direction: column;
      font-size: 0.8em;
      list-style-type: none;
-     padding: 1em;
+     padding: 0.7em;
      text-transform: uppercase;
 }
 

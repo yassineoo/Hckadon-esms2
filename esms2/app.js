@@ -1,21 +1,22 @@
 
 const express = require('express');
 const path = require('path');
-const dotenv = require('dotenv');
-dotenv.config();
+/*const dotenv = require('dotenv');
+dotenv.config();*/
 
 const cookieParser = require('cookie-parser');
 const  mongoose =require( "mongoose");
 const logger = require('morgan');
 const session = require('express-session');
 const indexRouter = require('./routes/index');
-
+const bodyParser = require("body-parser");
 const app = express();
 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.use(logger('dev'));
 app.use(session({
   secret: 'keyboard cat',
   resave: false,
@@ -24,7 +25,10 @@ app.use(session({
      maxAge:60000*60*24,
      }
 }))
-app.use(logger('dev'));
+
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
@@ -32,6 +36,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 //app.use('/users', usersRouter);
+
 
 
 

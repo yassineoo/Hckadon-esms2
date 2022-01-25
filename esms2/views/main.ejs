@@ -822,7 +822,7 @@
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button  class="submit" type='submit' >Send Message</button></div>
+              <div class="text-center"><button  class="submit" type='submit' id="submit">Send Message</button></div>
 
             </form>
            
@@ -932,10 +932,12 @@
   <script src="assets/js/main.js"></script>
   <script >
      //document.getElementsById('subbtn').onClick
-     var form = document.getElementById("#myForm");
-function handleForm(event) { event.preventDefault(); } 
-form.addEventListener('submit', handleForm);
-const btn =  document.getElementById("#submit");
+     var form = document.getElementById("myForm");
+      function handleForm(event) { event.preventDefault(); } 
+      form.addEventListener('submit', handleForm);
+      const btn =  document.getElementById("submit");
+
+
 const submit = () => {
   
   document.getElementsByClassName('loading')[0].style.display ='block';
@@ -943,23 +945,31 @@ const submit = () => {
 const xhttp = new XMLHttpRequest();
 
 // Define a callback function
-xhttp.onreadystatechange= function() {
-  if (xhttp.status==4){
-  document.getElementsByClassName('loading')[0].style.display ='none';
-  const header= this.getAllResponseHeaders();
-  alert(header);
+xhttp.onreadystatechange = function() {
+  console.log('hiiiiiii');
+    if (this.readyState == 4){
+     if ( this.status == 200) {
+      console.log('inside');
+       // Typical action to be performed when the document is ready:
+       document.getElementsByClassName('loading')[0].style.display ='none';
+       document.getElementsByClassName('sent-message')[0].style.display ='block';
+       document.getElementById("myForm").reset(); 
+    } else {
+      document.getElementsByClassName('error-message')[0].style.display ='block';
+    }
   }
-}
-
+};
+    const name =   document.getElementById('name').value;
+    const message =   document.getElementById('message').value;
+    const email =   document.getElementById('email').value;
+    const subject =   document.getElementById('subject').value;
 // Send a request
 xhttp.open("post", "./");
-document.getElementById
-const name =   document.getElementById('#name').value;
-const message =   document.getElementById('#message').value;
-const email =   document.getElementById('#email').value;
-const subject =   document.getElementById('#subject').value;
+
 xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-xhttp.send(JSON.stringify({name , subject , email ,message}));
+//xhttp.send(JSON.stringify({name , subject , email ,message}));
+
+xhttp.send(`name=${name}&message=${message}&email=${email}&subject=${subject}`);
 
 
 }

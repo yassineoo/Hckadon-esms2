@@ -1,7 +1,7 @@
 const Participant =require('../db/participant.js');
 const Team =require('../db/team.js');
-const dotenv =require('dotenv');
-dotenv.config();
+/*const dotenv =require('dotenv');
+dotenv.config();*/
 const nodemailer = require("nodemailer");
 const getAllUsers=async (req,res) => {
   try {
@@ -33,7 +33,8 @@ const getAllteams=async (req,res) => {
  const contact = async(req,res) => {
    
  
-    console.log(req.body);
+    console.log('*******',req.body);
+    console.log('*******',typeof req.body);
     //console.log(req);
     var transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -78,7 +79,7 @@ const getAllteams=async (req,res) => {
     })
     console.log('email sent  succsefly');
   
-   res.status(201).json({
+   res.status(200).json({
     status:true,
   });
 
@@ -125,6 +126,7 @@ const create = async (req,res) => {
         res.status(201).render('regestration',{message:'done'});
 
       }else {
+
         console.log('team has reached the limites number of participants ');
         res.status(400).render('regestration',{message: ' team has reached the limites number of participants'});
      }
