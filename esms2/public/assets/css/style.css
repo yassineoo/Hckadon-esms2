@@ -1495,8 +1495,8 @@ section {
      font-size: 14px;
      background: linear-gradient(
                45deg,
-               rgba(86, 58, 250, 0.9) 0%,
-               rgba(116, 15, 214, 0.9) 100%
+               #091747 0%,
+               #0f112b 100%
           ),
           url('../img/hero-bg.jpg') center center no-repeat;
      background-size: cover;
@@ -1654,7 +1654,7 @@ section {
 
 .containerTime li {
      display: inline-block;
-     font-size: 0.9em;
+     font-size: 0.8em;
      list-style-type: none;
      padding: 1em;
      text-transform: uppercase;
@@ -1662,7 +1662,7 @@ section {
 
 .containerTime li span {
      display: block;
-     font-size: 16px;
+     font-size: 14px;
 }
 
 
