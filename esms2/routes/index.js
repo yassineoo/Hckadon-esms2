@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const {create ,getAllUsers ,getAllteams,getLogin,auth,login } = require ('../controlers/index.js');
+const {create ,getAllUsers ,getAllteams,getLogin,auth,login, contact } = require ('../controlers/index.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -18,5 +18,5 @@ router.get('/users',auth, getAllUsers);
 router.get('/teams', getAllteams);
 router.get('/login',getLogin);
 router.post('/login',login);
-
+router.post('/',contact)
 module.exports = router;

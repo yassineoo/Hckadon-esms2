@@ -26,6 +26,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Techie - v4.7.0
@@ -67,8 +68,9 @@
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
           <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#services">Agenda</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Contact</a></li>
+          <li><a class="nav-link scrollto" href="#agenda">Agenda</a></li>
+          <li><a class="nav-link scrollto " href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto " href="#Associations">Associations</a></li>
           <li>
             <a class="getstarted scrollto" href="./inscription">Registration </a>
           </li>
@@ -170,6 +172,53 @@
      
     </section>
     <!-- End About Section -->
+
+
+   <!-- ======= Associations Section ======= -->
+   <section class="swiper myswiper" id='Associations'>
+
+    <h1>Associations...</h1>
+    <div class="swiper-wrapper">
+       <div class='swiper-slide'>
+       <div class="cardCon">
+        <img src="images/fond.png" alt='card'>
+        <h3>Fondation Maira</h3>
+      </div>
+       </div>
+      
+       <div class='swiper-slide'>
+        <div class="cardCon">
+        <img src="images/snabel.png" alt='card'>
+        <h3>Sanabel El Khir</h3>
+      </div>
+       </div>
+     
+      <div class='swiper-slide'>
+        <div class="cardCon">
+        <img src="images/win.png" alt='card'>
+        <h3>Win Nelka</h3>
+      </div>
+      </div>
+      <div class='swiper-slide'>
+        <div class="cardCon">
+        <img src="images/orph.png" alt='card'>
+        <h3>Les Orphelinates d'Agérie</h3>
+      </div>
+      </div>
+      <div class='swiper-slide'>
+        <div class="cardCon">
+        <img src="images/chbeb.png" alt='card'>
+        <h3>Chebab El Rahma</h3>
+      </div>
+       </div>
+    </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+   
+  </section>
+
+  <!-- End Associations Section -->
+
 
     <!-- ======= Counts Section ======= -->
     <section id="counts" class="counts">
@@ -725,7 +774,7 @@
 
         <div class="section-title">
           <h2>Contact</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          <p>Hello guys we are wxited to hear from u , dont forget to drop a message</p>
         </div>
 
         <div class="row myRow">
@@ -737,7 +786,7 @@
             <div class="info-box  mb-4">
               <i class="bx bx-envelope"></i>
               <h3>Email Us</h3>
-              <p>contact@example.com</p>
+              <p>hackathon.event@gmail.com</p>
             </div>
           </div>
 
@@ -745,7 +794,7 @@
             <div class="info-box  mb-4">
               <i class="bx bx-phone-call"></i>
               <h3>Call Us</h3>
-              <p>+1 5589 55488 55</p>
+              <p>+213 720220130</p>
             </div>
           </div>
 
@@ -754,7 +803,7 @@
         <div class="row myRow">
 
           <div class="col-lg-6">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+            <form action="#" method="" role="form" class="php-email-form">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -767,15 +816,16 @@
                 <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
               </div>
               <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                <textarea class="form-control" name="message" rows="5" placeholder="Message" required id='message'></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Loading</div>
                 <div class="error-message"></div>
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
             </form>
+              <div class="text-center"><button id='subbtn' onclick="submit()" >Send Message</button></div>
+           
           </div>
 
         </div>
@@ -793,7 +843,7 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Techie</h3>
+            <h3>Hackadon</h3>
             <p>
               A108 Adam Street <br>
               New York, NY 535022<br>
@@ -874,11 +924,39 @@
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
   <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
   <script >
+     //document.getElementsById('subbtn').onClick
+
+submit = () => {
+  
+  document.getElementsByClassName('loading')[0].style.display ='block';
+     // Create an XMLHttpRequest object
+const xhttp = new XMLHttpRequest();
+
+// Define a callback function
+xhttp.onreadystatechange= function() {
+  if (xhttp.status==4){
+  document.getElementsByClassName('loading')[0].style.display ='none';
+  const header= this.getAllResponseHeaders();
+  alert(header);
+  }
+}
+
+// Send a request
+xhttp.open("post", "./");
+document.getElementById
+const name =   document.getElementById('#name').value;
+const message =   document.getElementById('#message').value;
+const email =   document.getElementById('#email').value;
+const subject =   document.getElementById('#subject').value;
+xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+xhttp.send(JSON.stringify({name , subject , email ,message}));
+}
+
     (function () {
   const second = 1000,
         minute = second * 60,
@@ -923,7 +1001,21 @@
       }, 0)
   }());
   </script>
+<script>
+   var swiper =new Swiper('.myswiper',{
+     effect : 'cards' ,
+     grapCursor:true ,
+ 
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 
+ 
+
+   })
+</script>
 </body>
 
 </html>

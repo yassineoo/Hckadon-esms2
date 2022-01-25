@@ -1,18 +1,19 @@
 
 const express = require('express');
 const path = require('path');
+const dotenv = require('dotenv');
+dotenv.config();
+
 const cookieParser = require('cookie-parser');
 const  mongoose =require( "mongoose");
-
 const logger = require('morgan');
-
 const session = require('express-session');
 const indexRouter = require('./routes/index');
 
 const app = express();
 
-// view engine setup
 
+// view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(session({
