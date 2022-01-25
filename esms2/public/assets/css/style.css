@@ -13,6 +13,8 @@ html {
 }
 body {
      font-family: 'Open Sans', sans-serif;
+     overflow-x:hidden !important;
+    
      color: #816969;
      background-color: #0f1120;
 }
@@ -144,6 +146,11 @@ h6 {
 }
 #header .logo img {
      max-height: 70px;
+}
+.logoCount {
+     display:flex;
+     justify-content: center;
+     align-items: center;
 }
 
 /*--------------------------------------------------------------
@@ -359,6 +366,7 @@ h6 {
 
 .registerCon {
      display: flex;
+     flex-direction:column-reverse;
      padding-right: 15%;
      padding-left: 15%;
      margin-bottom: 20px;
@@ -392,6 +400,7 @@ h6 {
      margin-top: 30px;
      color: rgb(0, 0, 0);
      background-color: rgb(8, 133, 250);
+     text-align: center;
 }
 #hero .btn-get-started:hover {
      background: #fff;
@@ -405,7 +414,7 @@ h6 {
      display: flex;
      flex-direction: column;
      position: absolute;
-     bottom: 0%;
+     bottom: -5%;
      left: 50%;
      transform: translate(-50%, -50%);
 }
@@ -459,21 +468,18 @@ h6 {
           padding-top: 68px;
           margin-top: 68px;
      }
-     #hero .animated {
-          -webkit-animation: none;
-          animation: none;
-     }
+   
      #hero .btn-get-started {
           font-size: 18px;
      }
 
-     /*
+     
   #hero .hero-img {
     text-align: center;
   }
   #hero .hero-img img {
     width: 50%;
-  }*/
+  }
 }
 @media (max-width: 814px) {
      #hero h1 {
@@ -494,21 +500,21 @@ h6 {
           padding: auto;
           margin-bottom: 20px;
      }
-     /*#hero .hero-img img {
+     #hero .hero-img img {
     width: 60%;
-  }*/
+  }
 }
 @media (max-width: 575px) {
-     /* #hero .hero-img img {
+      #hero .hero-img img {
     width: 80%;
-  }*/
+  }
 }
 @media screen and (max-height: 600px) {
      #hero {
           height: 100vh;
      }
 }
-/*
+
 @-webkit-keyframes up-down {
   0% {
     transform: translateY(10px);
@@ -525,7 +531,7 @@ h6 {
   100% {
     transform: translateY(-10px);
   }
-}*/
+}
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
@@ -574,12 +580,15 @@ section {
 }
 
 .about .container{
-  height: 350px;
+  height: auto;
   background-color: rgba(255, 255, 255, 0.582);
   border-radius: 20px;
   position: relative;
   padding: 20px;
   display: flex;
+  justify-content:center;
+  align-items: center;
+
   flex-wrap: nowrap;
 }
 .about .container .imageabout{
@@ -601,15 +610,16 @@ section {
   display: none;
 }
 
-@media (max-width: 450px){
+@media (max-width: 994px){
   .about .container{
     width: 80%;
     height: 500px;
     flex-wrap: wrap;
+    flex-direction: column;
     height: auto;
   }
   .about .container .text p{
-    color: #0f1120;
+    color: #242531;
     padding: 1px;
     width: auto;
   }
@@ -624,6 +634,108 @@ section {
    }
   
 }
+/*--------------------------------------------------------------
+# association
+--------------------------------------------------------------*/
+.myswiper {
+   
+     background-color: #091747;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100vw  !important;
+     height: 100vh  !important;
+}
+.myswiper h1 {
+     color: rgb(255, 255, 255);
+     text-align: center;
+     margin-left: -20px !important;
+     margin-top: 50px  !important;;  
+}
+
+.swiper-button-next {
+     color: rgb(255, 255, 255) !important;;
+     width: 25% !important;
+     height: 25% !important;
+    
+
+}
+.swiper-button-prev {
+     color: rgb(255, 255, 255) !important;
+     
+     width: 25% !important;
+     height: 25% !important;
+
+}
+
+.swiper-slide {
+    
+
+     display: flex;
+     flex-direction: column-reverse;
+     
+     justify-content: center;
+     align-items: center;
+     font: size 22px; 
+}
+.cardCon {
+     border-radius: 5%;
+     width: 30vw;
+     height: 40vh;
+   
+     background-color: rgb(255, 255, 255);
+     display: flex;
+     flex-direction: column-reverse;
+     
+     justify-content: center;
+     align-items: center;
+}
+.cardCon img {
+     width: 150px;
+     height: 90px;
+     padding-top: 10px;
+}
+.cardCon h3{
+     padding-bottom: 20px;
+ padding: auto;
+ color: black;
+ text-align: center;
+ display: flex;
+ flex-wrap: wrap;
+ font-size: 26px;
+ font-weight: 700;
+}
+@media screen and (max-width:1000px) {
+ 
+     .cardCon h3{
+          font-size: 18px;
+          font-weight: 550px;
+     }
+     .cardCon img {
+          width: 100px;
+          height: 50px;
+     }
+}
+@media screen and (max-width:600px) {
+     .myswiper {
+          height: 80vh;
+     }
+     .cardCon {
+          height:30vh;
+     }
+     .cardCon h3{
+          font-size: 15px;
+          font-weight: 500px;
+     }
+     .cardCon img {
+          width: 80px;
+          height: 40px;
+     }
+}
+/*--------------------------------------------------------------
+# end association
+--------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
 # Counts
@@ -1108,16 +1220,20 @@ section {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+.contact {
+     background-color:  #0f122b;
+     color:#fff;
+}
 .contact .info-box {
      color: #444444;
      text-align: center;
      box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
      padding: 20px 0 30px 0;
-     background: #fff;
+     background: #ffffff;
 }
 .contact .info-box i {
      font-size: 32px;
-     color: #5846f9;
+     color: #d2f946;
      border-radius: 50%;
      padding: 8px;
 }
@@ -1132,6 +1248,14 @@ section {
      line-height: 24px;
      font-size: 14px;
      margin-bottom: 0;
+}
+.myRow {
+     display: flex;
+     justify-content:space-around;
+     align-items: center;
+     width: 90vw;
+     flex: 1;
+     width: auto;
 }
 .contact .php-email-form {
      box-shadow: 0 0 30px rgba(214, 215, 216, 0.6);
@@ -1274,8 +1398,8 @@ section {
      font-size: 14px;
      background: linear-gradient(
                45deg,
-               rgba(86, 58, 250, 0.9) 0%,
-               rgba(116, 15, 214, 0.9) 100%
+               #091747 0%,
+               #0f112b 100%
           ),
           url('../img/hero-bg.jpg') center center no-repeat;
      background-size: cover;
@@ -1410,7 +1534,7 @@ section {
      color: #fff;
      text-decoration: none;
 }
-
+/*--------------------------------------*/
 .rightSide {
      display: flex;
      flex-direction: column-reverse;
@@ -1423,47 +1547,38 @@ section {
      padding: auto;
      text-align: center;
 }
+.containerTime ul {
+     padding :auto;
+     display:flex;
+     flex-wrap:nowrap;
 
-.containerTime h2 {
-     font-weight: normal;
-     letter-spacing: 0.125rem;
-     text-transform: uppercase;
 }
 
+
 .containerTime li {
-     display: inline-block;
-     font-size: 1.2em;
+     display: flex;
+     flex-direction: column;
+     font-size: 0.8em;
      list-style-type: none;
-     padding: 1em;
+     padding: 0.7em;
      text-transform: uppercase;
 }
 
 .containerTime li span {
      display: block;
-     font-size: 3rem;
+     font-size: 14px;
 }
 
-.emoji {
-     display: none;
-     padding: 1rem;
-}
-
-.emoji span {
-     font-size: 4rem;
-     padding: 0 0.5rem;
-}
 
 @media all and (max-width: 1200px) {
-     .containerTime h2 {
-          font-size: calc(1.5rem * var(--smaller));
-     }
+
 
      .containerTime li {
-          font-size: calc(1.125rem * var(--smaller));
+          font-size: 0.5rem;
      }
 
      .containerTime li span {
-          font-size: calc(3.375rem * var(--smaller));
+          font-size: 14px;
      }
 }
 

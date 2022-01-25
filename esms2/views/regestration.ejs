@@ -5,10 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>hackadon</title>
+  
 
+<<<<<<< HEAD
 
 
     <link rel="stylesheet" href="../public/stylesheets/inscription.css">
+=======
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    
+ 
+    <link rel="stylesheet" href="/stylesheets/inscription.css">
+>>>>>>> 1aed4903aae8f25b815f58b98df9f0d48f0588b6
 
 
 </head>
@@ -18,9 +26,15 @@
    <form action='#' method="post">
     <% if(message){%>
         <% if(message=='done'){%>
-        <h5>thank u for regestration u will recive an email soon with more destails</h5>
+            <div id="dialog" title="message">
+                <p> thank u for regestration u will recive an email soon with more destails</p>
+             </br>
+                <a href='http://localhost:5000'>Back to home</a>
+              </div>
         <%}else{%>
-        <h4>try again</h4>
+            <div id="dialogE" title="error message">
+                <p> <%= message %> , try again </p>
+              </div>
         <%}%>
         <%}%>
        <label for="firstName">First Name:</label>
@@ -90,6 +104,16 @@
            document.getElementById("teamn").checked=false;
        })
    </script>
+      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <script>
+      $( function() {
+        $( "#dialog" )?.dialog();
+      } );
+      $( function() {
+        $( "#dialogE" )?.dialog();
+      } );
+      </script>
   
  
 </body>

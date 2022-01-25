@@ -49,7 +49,19 @@ button{
 option{
 background-color: rgba(0, 0, 200, 0.2);
 }
+<<<<<<< HEAD
 
 
 
+=======
+>>>>>>> 1aed4903aae8f25b815f58b98df9f0d48f0588b6
 
+#dialog{
+    background-color: rgb(10, 212, 111);
+    color: rgb(0, 0, 0);
+}
+
+#dialogE {
+    background-color: rgb(219, 44, 44);
+    color: #fff;
+}
