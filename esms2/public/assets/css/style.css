@@ -1621,143 +1621,15 @@ margin: 0px;
       font-size: 2rem;
  }
 
- .agendasect .agenda,.agendasect .agenda2,.agendasect .agenda3{
-     color: rgb(255, 255, 255);
-     text-align: center;
-     
- }
- .agendasect .agenda2 ,.agendasect .agenda3{
-     display: none;
- }
- .agendasect .schedule {
-     display: grid;
-     grid-template-columns: repeat(7, 1fr);
-     grid-template-rows: repeat(5, 60px);
-     grid-column-gap: 0px;
-     grid-row-gap: 0px;
-     margin-top: 50px;
-     margin-left: 10px;
-     }
-     
-     .agendasect .hour1 { grid-area: 1 / 1 / 4 / 2; }
-     .agendasect .hour2 { grid-area: 1 / 3 / 4 / 4; }
-     .agendasect .hour3 { grid-area: 3 / 2 / 6 / 3; }
-     .agendasect .hour4 { grid-area: 3 / 4 / 6 / 5; }
-     .agendasect .hour5 { grid-area: 1 / 5 / 4 / 6; }
-     .agendasect  .hour6 { grid-area: 3 / 6 / 6 / 7; }
-     .agendasect  .hour7 { grid-area: 1 / 7 / 4 / 8; }
-     .agendasect  .schedule2 {
-         display: none;
-         grid-template-columns: repeat(8, 1fr);
-         grid-template-rows: repeat(5, 58px);
-         grid-column-gap: 0px;
-         grid-row-gap: 0px;
-         margin-top: 50px;
-         margin-left: 10px;
-         }
-         
-         .agendasect  .hour2\,1 { grid-area: 1 / 1 / 4 / 2; }
-         .agendasect  .hour2\,2 { grid-area: 1 / 3 / 4 / 4; }
-         .agendasect  .hour2\,3 { grid-area: 3 / 2 / 6 / 3; }
-         .agendasect  .hour2\,4 { grid-area: 3 / 4 / 6 / 5; }
-         .agendasect  .hour2\,5 { grid-area: 1 / 5 / 4 / 6; }
-         .agendasect  .hour2\,6 { grid-area: 3 / 6 / 6 / 7; }
-         .agendasect  .hour2\,7 { grid-area: 1 / 7 / 4 / 8; }
-         .agendasect  .hour2\,8{ grid-area: 3 / 8 / 6 / 9; }
- 
- 
-         .agendasect  .schedule3 {
-             display: none;
-             grid-template-columns: repeat(8, 1fr);
-             grid-template-rows: repeat(5, 58px);
-             grid-column-gap: 0px;
-             grid-row-gap: 0px;
-             margin-top: 50px;
-             margin-left: 10px;
-             }
-             
-             .agendasect   .hour3\,1 { grid-area: 1 / 1 / 4 / 2; }
-             .agendasect  .hour3\,2 { grid-area: 1 / 3 / 4 / 4; }
-             .agendasect  .hour3\,3 { grid-area: 3 / 2 / 6 / 3; }
-             .agendasect  .hour3\,4 { grid-area: 3 / 4 / 6 / 5; }
-             .agendasect  .hour3\,5 { grid-area: 1 / 5 / 4 / 6; }
-             .agendasect  .hour3\,6 { grid-area: 3 / 6 / 6 / 7; }
-             .agendasect  .hour3\,7 { grid-area: 1 / 7 / 4 / 8; }
-             .agendasect  .hour3\,8{ grid-area: 3 / 8 / 6 / 9; }
-     
-     
-     
-             .agendasect .circles{
-     border-radius: 50%;
-     background-color: #fefeff;
-     margin: 0 20px;
-     padding: 10px;
-     border: 5px solid rgb(25, 210, 235);
-     box-shadow: 0 0 0 5px rgba(70, 208, 243, 0.747);
-     height: 80px;
-     width: 80px;
-     text-align: center;
-     box-sizing: content-box;
-     
-    
- }
- .agendasect .vl{
-     border-left: 4px solid rgb(25, 210, 235);
-     height: 50px;
-    position:relative;
-    left: 40%;
-    
- }
- .agendasect .schedule2 .vl,.agendasect .schedule3 .vl{
-     border-left: 4px solid rgb(25, 210, 235);
-     height: 50px;
-    position:relative;
-    left: 50%;
-    
- }
  
  /* image 1 */
- .agendasect .image{
-
-     background-image: url("../../images/backround.jpg");
-
-     background-color: #cccccc;
-   width: 100%;
-   height: 550px;
-   background-position: center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   position: relative;
-   background-size: 100% 100%;
- }
+ 
  .agendasect p,.agendasect h1,.agendasect   h3{
  color: #fff;
  
  }
- .agendasect .circles h1{
-     color: black;
- }
- .agendasect  .shape{
-     background-color: rgb(25, 210, 235);
-     border-radius: 50%;
-     width: 10px;
-     height: 10px;
-     left: 38%;
-     position: relative;
- }
- .agendasect .schedule2 .shape,.agendasect .schedule3 .shape{
-     background-color: rgb(25, 210, 235);
-     border-radius: 50%;
-     width: 10px;
-     height: 10px;
-     left: 48%;
-     position: relative;
- }
- .agendasect .text{
-     text-align: center;
-     position: relative;
  
- }
+ 
  
      .agendasect .button--bestia {
       font-family: freight-display-pro, serif;
@@ -1874,7 +1746,7 @@ margin: 0px;
  }
  
  .agendasect .buttons{
-     display: flex;
+     display: none;
  }
  
  @import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
@@ -1969,11 +1841,11 @@ margin: 0px;
    .agendasect .all{
      display: flex;
  }
- .agendasect .image{
+ .agendasect .agend{
      display: none;
  }
- .agendasect .button{ 
- padding: 0.5rem 0.5rem;
+ .agendasect #container2,.agendasect #container3{
+      display: inline-block;
  }
  
  
@@ -1984,17 +1856,87 @@ margin: 0px;
    .agendasect   .all{
          display: grid;
      }
-     .agendasect   .image{
+     .agendasect   .agend{
          display: none;
      }
-     .agendasect   .button{ 
-         display: none;
+     .agendasect   .buttons{ 
+         display: flex;
          }
-     
+      .agendasect .button{ 
+         
+         padding: 0.01rem 0.01rem;
+         }
+         .agendasect #container3,.agendasect #container2{
+          display: none;
+     }
      
      }
      .agendasect .container h1{
    color:rgb(25, 210, 235) ;
 
+ }
+.agend {
+     position: relative;
+     height: 100%;
+
+   }
+   
+
+   .agend {
+     background: #08084D;
+     font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+     font-size: 14px;
+     color: #000;
+     margin: 0;
+     padding: 0;
+   }
+
+   .agend .swiper {
+     width: 85%;
+     height: 100%;
+     
+   }
+
+   .agend .swiper-slide {
+     text-align: center;
+     font-size: 18px;
+     background: #08084D;
+
+     /* Center slide text vertically */
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: -webkit-flex;
+     display: flex;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     -webkit-justify-content: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     -webkit-align-items: center;
+     align-items: center;
+     height: 600px;
+     width: 500px;
+     margin: 20px;
+     border-radius: 10px;
+   }
+
+   .agend .swiper-slide img {
+     display: block;
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     border-radius: 10px;
+   }
+   .agend .swiper-horizontal > .swiper-pagination-bullets,.agend  .swiper-pagination-bullets.swiper-pagination-horizontal,.agend  .swiper-pagination-custom,.agend  .swiper-pagination-fraction{
+        bottom: -5px;
+   }
+   .agend  .swiper-button-next{
+     right: -110px;
+     
+ }
+ .agend .swiper-button-prev{
+      left: -110px;
+      
  }
 
