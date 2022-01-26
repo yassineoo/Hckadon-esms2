@@ -14,7 +14,7 @@ html {
 body {
      font-family: 'Open Sans', sans-serif;
      overflow-x: hidden !important;
-
+     overflow-y: auto;
      color: #816969;
 }
 
@@ -231,8 +231,8 @@ h6 {
 }
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
-     color: #fff;
-     border-color: #fff;
+     color: #0f112b;
+     border-color: #fdfdff;
 }
 .navbar .getstarted:before,
 .navbar li:hover > .getstarted:before {
@@ -327,7 +327,7 @@ h6 {
 
 .linesT .line {
      position: relative;
-     border-bottom: 1px solid yellow;
+     border-bottom: 1px solid #ffe607;
      display: block;
      top: -160px;
      left: 0;
@@ -631,7 +631,7 @@ section {
 # association
 --------------------------------------------------------------*/
 .myswiper {
-     overflow-y: auto;
+     overflow-y: hidden !important;
      overflow-x: hidden !important;
      background-color: #091747;
      display: flex;
@@ -696,24 +696,35 @@ section {
      font-weight: 700;
 }
 .donate {
+     font-size: 20px;
+     font-weight: 700;
+     margin-top: 15px;
      display: flex;
-     justify-content: space-between;
+     justify-content: space-around;
      align-items: center;
-     width: 100px;
-     background: #10a6fd;
+     width: 35%;
+     background: #fafafa;
      border-radius: 4px;
-     color: #fff;
+     color: rgb(0, 0, 0);
 
-     text-shadow: 1px 1px 5px #666;
+     text-shadow: 1px 1px 5px rgb(94, 94, 94);
 }
 .donate img {
      width: 30px;
      height: 40px;
+     margin-bottom: 6px;
+}
      
+
+
+.donate .heart2{
+     display: none;
+     color: #18d26e;
+    
 }
 .donate :hover {
-     background-color: #fff;
-     color: #5846f9;
+     background-color: rgb(255, 255, 255);
+     
 }
 @media screen and (max-width: 1000px) {
      .cardCon h3 {
@@ -723,6 +734,10 @@ section {
      .cardCon img {
           width: 100px;
           height: 50px;
+     }
+     .donate {
+          font-size: 18px;
+          font-weight: 600;
      }
 }
 @media screen and (max-width: 600px) {
@@ -740,27 +755,95 @@ section {
           width: 80px;
           height: 40px;
      }
+     .donate {
+          font-size: 16px;
+          font-weight: 500;
+     }
 }
 /*--------------------------------------------------------------
 # end association
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
+#sponsers
+--------------------------------------------------------------*/
+
+.sponsers {
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background-image: url('../../images/sponsers.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden !important;
+}
+.sponsers h1 {
+     color: black;
+    margin-bottom: 20px;
+    font-family: Roboto;
+font-style: normal;
+font-weight: 800;
+}
+.sponsers .container {
+   height: 80%;
+   width: 100%;
+   
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+}
+.sponsers img {
+     height:150px;
+     width:170px;
+}
+.sponsers .sponLogo:hover{
+     transform: scale(1.2);
+
+       transition: .5s;
+
+}
+@media screen and (max-width:1200) {
+     .sponsers img {
+          height:300px;
+          width:130px;
+     }
+}
+@media screen and (max-width:600) {
+     .sponsers img {
+          height:70px;
+          width:90px;
+     }
+}
+/*--------------------------------------------------------------
+# end sponsers
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
 .counts {
-     background: linear-gradient(
-               90deg,
-               rgba(88, 70, 249, 0.5) 0%,
-               rgba(123, 39, 216, 0.5) 100%
-          ),
-          url('../img/counts-bg.png') center center no-repeat;
-     padding: 80px 0 60px 0;
+     display: flex;
+     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    background-repeat: no-repeat;
+    background-size: cover;
+     background-image: url('../../images/count4.jpg');
+     overflow-x: hidden !important;
+}
+.counts .counters {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
 }
 .counts .counters span {
      font-size: 48px;
      display: block;
-     color: #fff;
+     color: rgb(0, 0, 0);
      font-weight: 600;
      font-family: 'Poppins', sans-serif;
 }
@@ -768,7 +851,14 @@ section {
      padding: 0;
      margin: 0 0 20px 0;
      font-size: 15px;
-     color: rgba(255, 255, 255, 0.8);
+     color: rgba(0, 0, 0, 0.8);
+}
+.counts i{
+     width: 32px;
+     height: 32px;
+     color: #e5f31a;
+     background: linear-gradient(255,255,255);
+     font-size: 2rem;
 }
 
 /*--------------------------------------------------------------
@@ -1508,6 +1598,7 @@ section {
      background: linear-gradient(45deg, #091747 0%, #0f112b 100%),
           url('../img/hero-bg.jpg') center center no-repeat;
      background-size: cover;
+     overflow-x: hidden !important;
 }
 #footer .footer-top {
      padding: 60px 0 30px 0;
@@ -1853,6 +1944,7 @@ section {
 .agendasect .image {
      background-image: url('../../images/backround_edited.jpg');
      background-color: #cccccc;
+     overflow-x: hidden !important;
      width: 100%;
      height: 550px;
      background-position: center;
