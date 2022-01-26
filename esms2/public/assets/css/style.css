@@ -320,7 +320,7 @@ h6 {
      width: 100%;
      height: 100vh;
      background: linear-gradient(45deg, #0f1120 0%, #0f122b 100%),
-          url('../img/hero-bg.jpg') center center no-repeat;
+          center center no-repeat;
      background-size: cover;
 }
 #hero .container {
@@ -638,7 +638,8 @@ section {
 # association
 --------------------------------------------------------------*/
 .myswiper {
-   
+     overflow-y:auto;
+      overflow-x:hidden !important;
      background-color: #091747;
      overflow-y:auto; 
      overflow-x:hidden !important;
@@ -1584,6 +1585,7 @@ section {
      }
 }
 
+
 .agendasect{
      background-color: rgb(8, 8, 77);
      padding: 20px;
@@ -1716,7 +1718,9 @@ margin: 0px;
  
  /* image 1 */
  .agendasect .image{
-     background-image: url("../../images/backround_edited.jpg");
+
+     background-image: url("../../images/backround.jpg");
+
      background-color: #cccccc;
    width: 100%;
    height: 550px;
@@ -1991,4 +1995,6 @@ margin: 0px;
      }
      .agendasect .container h1{
    color:rgb(25, 210, 235) ;
+
  }
+
