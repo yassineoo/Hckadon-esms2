@@ -26,6 +26,8 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+
+
   <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <!-- =======================================================
@@ -181,6 +183,12 @@
     <div class="swiper-wrapper">
        <div class='swiper-slide'>
        <div class="cardCon">
+         
+        <a href="#" class="donate">
+         <div> DONATE </div>
+          <img id='2' src="https://img.icons8.com/ios/50/000000/like--v1.png"/>
+          <img id=1' src="https://img.icons8.com/dusk/64/000000/like--v1.png"/>
+        </a>
         <img src="images/fond.png" alt='card'>
         <h3>Fondation Maira</h3>
       </div>
@@ -188,6 +196,20 @@
       
        <div class='swiper-slide'>
         <div class="cardCon">
+          <button>
+        
+            <div class="inside">
+                <form>
+                    <input type="text" value="$0,00">
+                </form>
+            </div>
+            <span>
+                <svg viewBox="0 0 24 24">
+                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+                Donate
+            </span>
+        </button>
         <img src="images/snabel.png" alt='card'>
         <h3>Sanabel El Khir</h3>
       </div>
@@ -195,18 +217,21 @@
      
       <div class='swiper-slide'>
         <div class="cardCon">
+          <a href="#" class="donate">DONATE</a>
         <img src="images/win.png" alt='card'>
         <h3>Win Nelka</h3>
       </div>
       </div>
       <div class='swiper-slide'>
         <div class="cardCon">
+          <a href="#" class="donate">DONATE</a>
         <img src="images/orph.png" alt='card'>
         <h3>Les Orphelinates d'Agérie</h3>
       </div>
       </div>
       <div class='swiper-slide'>
         <div class="cardCon">
+          <a href="#" class="donate">DONATE</a>
         <img src="images/chbeb.png" alt='card'>
         <h3>Chebab El Rahma</h3>
       </div>
@@ -223,7 +248,7 @@
 
     
             <div class="section-title">
-              <h2 style="color: white;">AGENDA..</h2>
+              <h2 style="color: white;">AGENDA...</h2>
              
             </div>
             <div class="buttons">
@@ -1560,6 +1585,7 @@ btn.addEventListener("click", submit);
       }, 0)
   }());
   </script>
+
 <script>
    var swiper =new Swiper('.myswiper',{
      effect : 'cards' ,
