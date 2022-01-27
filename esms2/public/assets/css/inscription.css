@@ -37,19 +37,6 @@ input[type='url'] {
      border: 2px solid rgb(250, 246, 246);
 }
 
-textarea {
-     border-radius: 5px;
-     border: 2px solid black;
-}
-input[type='submit'] {
-     padding: 5px 10px;
-
-     border-radius: 3px;
-}
-input[type='submit']:hover {
-     box-shadow: 3px 3px 3px #201b1b3d;
-}
-
 .newname {
      display: none;
 }
