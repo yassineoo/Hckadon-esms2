@@ -29,7 +29,10 @@
 
 
   <link href="https://unpkg.com/swiper/swiper-bundle.min.css" rel="stylesheet">
-
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<!-- Slick Slider CSS -->
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
   <!-- =======================================================
   * Template Name: Techie - v4.7.0
   * Template URL: https://bootstrapmade.com/techie-free-skin-bootstrap-3/
@@ -245,7 +248,23 @@
     <div class="swiper-button-prev"></div>
    
   </section>
-  <section class="sponsers ">
+  <section  class="sponsers ">
+    
+    <h1>Our Sponsers . . .</h1>
+    <div class="row">
+     
+      <div class="container">
+        <section class="logo-carousel slider" data-arrows="true">
+          <div class="slide"><img src="images/spon3-removebg-preview.png"></div>
+          <div class="slide"><img src="images/spon2-removebg-preview.png"></div>
+          <div class="slide"><img src="images/spon4-removebg-preview.png"></div>
+          <div class="slide"><img src="images/spon1-removebg-preview.png"></div>
+   
+        </section>
+      </div>
+    </div>
+  </section>
+  <!--<section class="sponsers ">
     <h1>Our Sponsers . . .</h1>
     <div class="container">
       <div class = 'sponLogo'>
@@ -264,7 +283,7 @@
     </div>
 
   </section>
-
+-->
   <!-- End Associations Section -->
   <div class="agendasect" data-aos="fade-up" id='agenda'>
       
@@ -1713,6 +1732,35 @@ for (let index = 0; index <  tryd .length; index++) {
          
       
          
+     </script>
+     !-- jQuery first, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+     <!-- Slick Slider JS -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+     <script>
+         $(document).ready(function() {
+  $('.logo-carousel').slick({
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1000,
+    arrows: true,
+    dots: false,
+    pauseOnHover: false,
+    responsive: [{
+      breakpoint: 999,
+      settings: {
+        slidesToShow: 3
+      }
+    }, {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2
+      }
+    }]
+  });
+});
      </script>
 </body>
 
