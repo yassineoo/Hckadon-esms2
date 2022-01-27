@@ -60,7 +60,7 @@
             <li><span id="days"></span>days</li>
         <li><span id="hours"></span>Hours</li>
         <li><span id="minutes"></span>Minutes</li>
-        <li><span id="seconds"></span>🔥Seconds🔥</li>
+        <li><span id="seconds"></span>Seconds🔥</li>
         
       </ul>
     </div>
@@ -168,9 +168,10 @@
         </div>
 
         <div class="text">
-          <p>  Hackadon est un hackathon caritatif visant à venir en aide à plusieurs associations via la contribution de plusieurs groupes de développeurs qui se chargeront de les représenter dans cette compétition.
-            Sous le slogan ”coding for giving”, Hackadon regroupera plusieurs équipes qui auront pour but la satisfaction d’un besoin exprimé par une entreprise, celui-ci devra être réel pour éviter à l'entreprise de recouvrir à une sous-traitance. Les gains et prix reviendront en partie aux associations, le reste quant à lui pour les équipes ayant représentées ces dernières.
-            La notation sera basée sur un système de pourcentage  permettant d'établir un classement par les membres du jury ce qui donnera la chance à toutes les  associations de bénéficiers des dons collectés</p>
+          <p>  Hackadon is a charity hackathon in which
+            several groups of developers will represent associations in order to raise funds for them.
+            "coding for giving" being its slogan, Hackadon will bring together several teams whose goal will be to satisfy a need expressed by a company.
+            The members of the jury will rate the teams according to a percentage system which will give the chance to all the associations to benefit from the donations collected.</p>
         </div>
        
       </div>
@@ -180,7 +181,7 @@
 
 
    <!-- ======= Associations Section ======= -->
-   <section class="swiper myswiper" id='Associations' data-aos="fade-up">
+   <section class="swiper myswiperA" id='Associations' data-aos="fade-up">
 
     <h1>Associations...</h1>
     <div class="swiper-wrapper">
@@ -320,10 +321,10 @@
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide">
-                <img src="../public/images/day_1.png" alt="image">
+                <img src="images/day_1.png" alt="image">
             </div>
-            <div class="swiper-slide"><img src="../public/images/day_2.png" alt="image"></div>
-            <div class="swiper-slide"><img src="../public/images/day 3.png " alt="image"></div>
+            <div class="swiper-slide"><img src="images/day_2.png" alt="image"></div>
+            <div class="swiper-slide"><img src="images/day 3.png " alt="image"></div>
             
           </div>
           <div class="swiper-button-next"></div>
@@ -332,24 +333,6 @@
         </div>
     
     
-        <!-- Swiper JS -->
-        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    
-        <!-- Initialize Swiper -->
-        <script>
-          var swiper = new Swiper(".mySwiper", {
-            cssMode: true,
-            navigation: {
-              nextEl: ".swiper-button-next",
-              prevEl: ".swiper-button-prev",
-            },
-            pagination: {
-              el: ".swiper-pagination",
-            },
-            mousewheel: true,
-            keyboard: true,
-          });
-        </script>
         </div>
  <div class="all">
           <div class="containerag" id="container1">
@@ -1357,8 +1340,26 @@ btn.addEventListener("click", submit);
   }());
   </script>
 
+        <!-- Swiper JS -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper(".mySwiper", {
+            cssMode: true,
+            navigation: {
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            },
+            pagination: {
+              el: ".swiper-pagination",
+            },
+            mousewheel: true,
+            keyboard: true,
+          });
+        </script>
 <script>
-   var swiper =new Swiper('.myswiper',{
+   var swiper2 =new Swiper('.myswiperA',{
      effect : 'cards' ,
      grapCursor:true ,
  
@@ -1367,6 +1368,7 @@ btn.addEventListener("click", submit);
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  keyboard: true,
 
    })
    const tryd =document.getElementsByClassName ("donate");
