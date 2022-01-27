@@ -1,39 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
-<body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Swiper demo</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <!-- Link Swiper's CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <link href="stylesheets/inscription.css" rel="stylesheet">
 
-    <h1>regestration</h1>
-    <div class='bobCon'>
-    <div class="blob1"></div>
-    <div class="blob2"></div> 
-</div>  
-    <p>you want to join to our compition ... what you stand fill out the following form to join to us for a long and exciting joutny awaits you</p>
 
-   <form action='#' method="post">
-    <% if(message){%>
-        <% if(message=='done'){%>
-            <div id="dialog" title="message">
-                <p> thank u for regestration u will recive an email soon with more destails</p>
-             </br>
-                <a href='http://localhost:5000'>Back to home</a>
-              </div>
-        <%}else{%>
-            <div id="dialogE" title="error message">
-                <p> <%= message %> , try again </p>
-              </div>
-        <%}%>
-        <%}%>
-       <label for="firstName">First Name:</label>
-       <input class="input" type="text" name="firstName" id="firstName"><br><br>
-       <label for="lastName">LastName:</label>
-       <input class="input" type="text" name="lastName" id="lastName"><br><br>
-       <label for="email">email account:</label>
-       <input class="input" type="email" name="email" id="email"><br><br>
+    <!-- Demo styles -->
+    <style>
+      html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
       
-       <br><br>
-       <label for="schooln"> the name of your university (institution):</label>
-       <input class="input" type="text" name="university" id="schooln"><br><br>
-       <label for="edulevel">in which year are you currently studying:</label>
+        background-image: url('images/backround.jpg');
+        background-color: #bb1515;
+        background-size: cover;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: rgb(211, 190, 0);
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+        background-color: #690909;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background-image: url('images/backround.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+
+      
+  input {
+
+   padding: 0.25rem 0;
+	 border: 0;
+	 border-bottom: 8px solid #bb1515;
+   outline: 0;
+   background: transparent;
+   font-size: 3rem;
+	 line-height: 4rem;
+}
+textarea {
+  padding: 0.25rem 0;
+	 border: 0;
+	 border-bottom: 8px solid #bb1515;
+   outline: 0;
+   background: transparent;
+   font-size: 1rem;
+	 line-height: 2rem;
+
+}
+
+    </style>
+  </head>
+
+  <body>
+    <!-- Swiper -->
+    <form action='#' method="post"></form>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <label for="firstName">First Name:</label>
+          <input class="input" type="text" name="firstName" id="firstName">
+        </div>
+        <div class="swiper-slide">
+          <label for="lastName">LastName:</label>
+          <input class="input" type="text" name="lastName" id="lastName">
+        </div>
+        <div class="swiper-slide">
+          <label for="email">email account:</label>
+          <input class="input" type="email" name="email" id="email">
+        </div>
+        <div class="swiper-slide">
+          <label for="schooln"> the name of your university (institution):</label>
+          <input class="input" type="text" name="university" id="schooln">
+        </div>
+        <div class="swiper-slide">
+          <label for="edulevel">in which year are you currently studying:</label>
 
           <select name="edulevel" id="edulevel">
           <option value="firsty">first year (1CP)</option>
@@ -42,70 +127,89 @@
           <option value="fourthy">fourth year (2CS)</option>
           <option value="fifthy">fifth year (3CS)</option>
           </select>
-       <p>Are you part of a team ?</p>
-       <label for="teamy">yes</label>
-       <input type="radio" name="teamY" id="teamy">
-       <label for="teamn">no</label>
-       <input type="radio" name="teamN" id="teamn" ><br><br>
-       <div class="newdiv">
-           <label for="teamName">what's your team name ?</label>
-           <input type="text" name="teamName" id="teamName">
-           <br>
-           <a href="#" id="newteam">or create a new team</a>
-       </div>
-       <div class="newdiv2">
-           <label for="newteam">what name do you want to give for your team ? </label>
-           <input type="text" name="newTeam" id="newteam">
-       </div><br><br>
-       <label for="exp">Do you have a github account or a portfolio about yourself?</label>
-       <input class="input" type="url" name="exp" id="exp" placeholder="if yes enter the url here"><br><br>
-       <p>your main skills and experiences:</p>
-       <textarea name="skills" id="skills" cols="30" rows="10"></textarea><br><br>
-       <p>Why do you want to take part in the hack?</p>
-       <textarea name="motiv" id="motiv" cols="30" rows="10"></textarea><br><br>
-       <input type="submit" value="submit">
+        </div>
+        <div class="swiper-slide">
+          <p>Are you part of a team ?</p>
+        </div class ='ysno'>
+          <label for="teamy">yes</label>
+          <input type="radio" name="teamY" id="teamy">
+          <label for="teamn">no</label>
+          <input type="radio" name="teamN" id="teamn" >
+      </div>
+          <div class="newdiv">
+              <label for="teamName">what's your team name ?</label>
+              <input type="text" name="teamName" id="teamName">
+              <br>
+              <a href="#" id="newteam">or create a new team</a>
+          </div>
+          <div class="newdiv2">
+              <label for="newteam">what name do you want to give for your team ? </label>
+              <input type="text" name="newTeam" id="newteam">
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <label for="exp">Do you have a github account or a portfolio about yourself?</label>
+          <input class="input" type="url" name="exp" id="exp" placeholder="if yes enter the url here">
+        </div>
+        <div class="swiper-slide">
+          <p>your main skills and experiences:</p>
+          <textarea name="skills" id="skills" cols="30" rows="10"></textarea>
+        </div>
+        <div class="swiper-slide">
+          <p>Why do you want to take part in the hack?</p>
+          <textarea name="motiv" id="motiv" cols="30" rows="10"></textarea>
+          <input type="submit" value="submit">
 
-   </form>
-  
-   <script>
-       document.getElementById("teamy").addEventListener("click",function(){
-           document.querySelector(".newdiv").style.display="flex";
-       })
-       document.getElementById("newteam").addEventListener("click",function(){
-           document.querySelector(".newdiv2").style.display="flex";
-       })
-       document.getElementById("newteam").addEventListener("click",function(){
-           document.querySelector(".newdiv").style.display="none";
-       })
-        document.getElementById("teamn").addEventListener("click",function(){
-           document.querySelector(".newdiv").style.display="none";
-       })
+       
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </form>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+          type: "progressbar",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
+    <script>
+      document.getElementById("teamy").addEventListener("click",function(){
+          document.querySelector(".newdiv").style.display="flex";
+      })
+      document.getElementById("newteam").addEventListener("click",function(){
+          document.querySelector(".newdiv2").style.display="flex";
+      })
+      document.getElementById("newteam").addEventListener("click",function(){
+          document.querySelector(".newdiv").style.display="none";
+      })
        document.getElementById("teamn").addEventListener("click",function(){
-           document.querySelector(".newdiv2").style.display="none";
-       })
-        document.getElementById("teamn").addEventListener("click",function(){
-           document.getElementById("teamy").checked=false;
-       })
-       document.getElementById("teamy").addEventListener("click",function(){
-           document.getElementById("teamn").checked=false;
-       })
-       document.getElementById("doanatBtn").addEventListener(
-          
-       )
-   </script>
-      <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-      <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-      <script>
-      $( function() {
-        $( "#dialog" )?.dialog();
-      } );
-      $( function() {
-        $( "#dialogE" )?.dialog();
-      } );
-
-      </script>
+          document.querySelector(".newdiv").style.display="none";
+      })
+      document.getElementById("teamn").addEventListener("click",function(){
+          document.querySelector(".newdiv2").style.display="none";
+      })
+       document.getElementById("teamn").addEventListener("click",function(){
+          document.getElementById("teamy").checked=false;
+      })
+      document.getElementById("teamy").addEventListener("click",function(){
+          document.getElementById("teamn").checked=false;
+      })
+      document.getElementById("doanatBtn").addEventListener(
+         
+      )
+  </script>
   
-
- 
-</body>
+  </body>
 </html>

@@ -10,34 +10,7 @@ body {
      height: 100%;
      background: linear-gradient(191.78deg, #00648e 0%, #7070e8 100%);
 }
-.bobCon {
-     position: absolute;
-     width: 2739.69px;
-     height: 3619.65px;
-     left: -1176px;
-     top: -1395.82px;
-}
-.blob1 {
-     position: absolute;
-     left: -7.07%;
-     right: -25.74%;
-     top: 37.83%;
-     bottom: 28.39%;
 
-     background: #2bd9f5;
-     transform: matrix(0.76, -0.89, -0.49, -0.74, 0, 0);
-}
-.blob2 {
-     position: absolute;
-     left: -5.09%;
-     right: -27.72%;
-     top: 39.9%;
-     bottom: 26.32%;
-
-     background: #00648e;
-     border: 8px solid #1bc5fb;
-     transform: matrix(0.76, -0.89, -0.49, -0.74, 0, 0);
-}
 h1 {
      left: 128px;
      top: 21px;
@@ -55,24 +28,6 @@ h1 {
 
      border: 10px solid #ffffff;
      box-sizing: border-box;
-}
-p1 {
-     position: absolute;
-     width: 2807px;
-     height: 340px;
-     left: 0px;
-     top: 273px;
-
-     font-family: Poppins;
-     font-style: normal;
-     font-weight: normal;
-     font-size: 64px;
-     line-height: 96px;
-     display: flex;
-     align-items: center;
-     letter-spacing: 0.02em;
-
-     color: #000000;
 }
 select,
 input[type='text'],
@@ -110,12 +65,6 @@ button {
 option {
      background-color: rgba(0, 0, 200, 0.2);
 }
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> 1aed4903aae8f25b815f58b98df9f0d48f0588b6
 
 #dialog {
      background-color: rgb(10, 212, 111);
