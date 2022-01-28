@@ -413,7 +413,7 @@ h6 {
      display: flex;
      flex-direction: column;
      position: absolute;
-     bottom: -5%;
+     bottom: 0;
      left: 50%;
      transform: translate(-50%, -50%);
 }
@@ -451,9 +451,9 @@ h6 {
      #hero {
           background-attachment: fixed;
      }
-     #hero .btn-get-started {
           font-size: 24px;
-          padding: 10px 28px;
+          paddi     #hero .btn-get-started {
+ng: 10px 28px;
 
           margin-top: 60px;
      }
@@ -478,6 +478,10 @@ h6 {
      #hero .hero-img img {
           width: 50%;
      }
+     .arrow span{
+          width:30px;
+          height:30px;
+     }
 }
 @media (max-width: 814px) {
      #hero h1 {
@@ -500,6 +504,9 @@ h6 {
      }
      #hero .hero-img img {
           width: 60%;
+     }
+     #hero .btn-get-started {
+          margin:0;
      }
 }
 @media (max-width: 575px) {
@@ -701,6 +708,7 @@ video{
 .cardCon h3 {
      padding-bottom: 20px;
      padding: auto;
+     padding-left:3px;
      color: black;
      text-align: center;
      display: flex;
@@ -783,6 +791,7 @@ video{
      background-size: cover;
      background-position: center; /* Center the image */
      overflow-x: hidden !important;
+     padding:50px;
 }
 .sponsers h1 {
      color: rgb(255, 255, 255);
@@ -800,43 +809,13 @@ video{
 }
 .sponsers img:hover {
      transform: scale(1.7);
-
+     z-index:1000;
      transition: 0.5s;
 }
-/*.sponsers .container {
-   height: 80%;
-   width: 100%;
-   
-   display: flex;
-   justify-content: space-around;
-   align-items: center;
-}
-.sponsers img {
-     height:150px;
-     width:170px;
-}
-.sponsers .sponLogo:hover{
-     transform: scale(1.2);
-
-       transition: .5s;
-
-}
-@media screen and (max-width:1200) {
-     .sponsers img {
-          height:300px;
-          width:130px;
-     }
-}
-@media screen and (max-width:600) {
-     .sponsers img {
-          height:70px;
-          width:90px;
-     }
-}
-/*--------------------------------------------------------------
-# end sponsers
---------------------------------------------------------------*/
 /* Slider */
+.slider {
+    padding:10px;
+}
 .slick-slide {
      margin: 0px 20px;
 }
@@ -928,6 +907,10 @@ body {
      margin-top: 32px;
 }
 /*--------------------------------------------------------------
+# end sponsers
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
 # Counts
 --------------------------------------------------------------*/
 .counts {
@@ -937,7 +920,7 @@ body {
      align-items: center;
 
      background-repeat: no-repeat;
-     background-size: auto;
+     background-size: cover;
      background-position: center;
      background-image: url('../../images/count5.jpg');
      overflow-x: hidden !important;
