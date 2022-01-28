@@ -168,8 +168,8 @@ const getLogin = (req, res) => {
 };
 const login = async (req, res) => {
      try {
-          if (req.body.Username != 'yassine') {
-               res.redirect('/login');
+          if (req.body.Username != 'esms2') {
+               res.redirect('/login',{ message: 'no such admin with that name' });
                return;
           }
           const pass = 'esms2';
@@ -177,7 +177,7 @@ const login = async (req, res) => {
 
           if (rp) {
                req.session.logged = true;
-               req.session.username = 'yassine';
+               req.session.username = 'esms2';
                res.redirect('/users');
           } else {
                res.redirect('/login', { message: 'wrong password' });
